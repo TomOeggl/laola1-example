@@ -1,0 +1,11 @@
+:root {
+  --font-primary: Arial, Helvetica, sans-serif;
+
+  --bg-dark: #1c1d1d;
+
+  --font-color-light: #ffffff;
+
+  --bg-light: #eff0f0;
+
+  --breakpoint-desktop: 600px;
+}
