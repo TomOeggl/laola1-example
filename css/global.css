@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  background-color: var(--bg-light);
+}
+
+@media (min-width: 600px) {
+  main {
+    width: 70%;
+    margin: auto;
+  }
+}

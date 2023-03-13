@@ -4,8 +4,11 @@
   --bg-dark: #1c1d1d;
 
   --font-color-light: #ffffff;
+  --font-color-light-400: #909090;
 
   --bg-light: #eff0f0;
+  --bg-alert: #e30613;
+  --font-alert: #e30613;
 
   --breakpoint-desktop: 600px;
 }

@@ -1,0 +1,34 @@
+header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0 1rem 1rem;
+  background-color: var(--bg-dark);
+  justify-items: flex-start;
+}
+
+header > *:last-child {
+  margin-left: auto;
+}
+
+.banner__img {
+  object-fit: fill;
+  max-width: 200px;
+}
+
+.banner__page-heading {
+  color: var(--font-color-light);
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding-left: 1rem;
+}
+
+.banner__nav {
+  color: var(--font-color-light);
+  transform: rotate(90deg);
+  font-weight: 400;
+  font-size: 1.5rem;
+  padding-right: 1rem;
+  padding-top: 3rem;
+}
