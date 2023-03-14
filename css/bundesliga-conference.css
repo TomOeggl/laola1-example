@@ -51,7 +51,7 @@
 .round-sidescroller__match {
   display: flex;
   justify-content: space-between;
-  background-color: white;
+  background-color: var(--font-color-light);
   padding: 16px;
   min-width: 250px;
 }
@@ -127,7 +127,6 @@
 .league-banner__nav-container {
   background: #1c1d1d 0% 0% no-repeat padding-box;
   display: flex;
-  justify-content: space-around;
   font-weight: 600;
   padding: 16px 0;
   border-radius: 0 0 4px 4px;
@@ -196,7 +195,7 @@
   flex-direction: column-reverse;
 }
 
-.match__arrow {
+i.match__arrow {
   display: none;
 }
 
@@ -287,6 +286,7 @@
 
   .league-banner__nav-container {
     overflow-x: hidden;
+    justify-content: space-between;
   }
   .match__home-team,
   .match__away-team {
