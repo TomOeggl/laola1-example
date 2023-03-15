@@ -217,6 +217,8 @@
 .table-container > * {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .table-row__heading {
@@ -225,7 +227,8 @@
   background-color: var(--bg-dark);
   color: var(--font-color-light);
   font-size: 0.9rem;
-  padding: auto 100%;
+  padding: auto 50%;
+  text-align: center;
 }
 
 .table-row__heading img {
@@ -244,10 +247,11 @@
 }
 
 .table-row__date:nth-child(even),
-.table-row__season:nth-child(even),
+.table-row__season:nth-child(odd),
 .table-row__club-logo:nth-child(even),
-.table-row__result:nth-child(even) {
+.table-row__result:nth-child(odd) {
   background-color: var(--font-color-light);
 }
 .table-row__season {
+
 }
