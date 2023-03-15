@@ -16,8 +16,8 @@
 }
 
 .round-sidescroller__round-indicator {
-  background: #1c1d1d 0% 0% no-repeat padding-box;
-  color: var(--font-color-light);
+  background: var(--bg-secondary) 0% 0% no-repeat padding-box;
+  color: var(--font-secondary);
   min-width: 350px;
   text-align: center;
   padding: 16px 0;
@@ -35,14 +35,19 @@
 .round-sidescroller__match {
   display: flex;
   justify-content: space-between;
-  background-color: white;
+  background-color: var(--bg-primary);
   padding: 16px;
   min-width: 250px;
 }
-
+.round-sidescroller__match p {
+  color: var(--font-primary);
+}
 .round-sidescroller__match--selected {
-  background-color: var(--bg-dark);
-  color: var(--font-color-light);
+  background-color: var(--bg-secondary);
+}
+
+.round-sidescroller__match--selected h3 {
+  color: var(--font-secondary);
 }
 
 .round-sidescroller__home-team,
@@ -66,7 +71,7 @@
   border-radius: 0.2rem;
   transform: skewX(-10deg);
   text-transform: uppercase;
-  color: var(--font-color-light);
+  color: var(--font-secondary);
   padding: 0.2rem 0.5rem;
   font-weight: 600;
   font-size: 1rem;
@@ -91,4 +96,16 @@
   font-style: italic;
   font-size: 1rem;
   padding-top: 6px;
+}
+
+@media (min-width: 600px) {
+  .round-sidescroller {
+    overflow-x: hidden;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .round-sidescroller__match {
+    border: 1px solid white;
+  }
 }

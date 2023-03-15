@@ -7,7 +7,7 @@ footer {
     #d40a20 66%,
     #9c0110 100%
   );
-  color: var(--font-color-light);
+  color: var(--font-secondary);
   padding: 3rem 5rem 3rem 3rem;
   font-style: italic;
 }

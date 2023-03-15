@@ -1,33 +1,28 @@
 :root {
   --font-main: Arial, Helvetica, sans-serif;
-  --bg-dark-050: #434343;
-  --bg-dark: #1c1d1d;
+  --font-primary: #161615;
+  --font-secondary: #ffffff;
+  --font-tertiary: #909090;
 
-  --font-color-light: #ffffff;
-  --font-color-light-400: #909090;
-
-  --bg-light: #eff0f0;
   --bg-alert: #e30613;
   --font-alert: #e30613;
 
-  --font-main: Arial, Helvetica, sans-serif;
-  --bg-dark-050: #434343;
-  --bg-dark: #1c1d1d;
-
-  --font-color-light: #ffffff;
-  --font-color-light-400: #909090;
-
-  --bg-light: #eff0f0;
-  --bg-alert: #e30613;
-  --font-alert: #e30613;
+  --bg-primary: #ffffff;
+  --bg-secondary: #1c1d1d;
+  --bg-secondary-050: #434343;
+  --bg-tertiary: #eff0f0;
 }
-/*
---font-primary: #161615;
---font-secondary: #ffffff;
---font-tertiary: #909090;
 
---bg-primary: #ffffff;
---bg-secondary: #1c1d1d;
---bg-secondary-050: #434343;
---bg-tertiary: #eff0f0;
-*/
+@media (prefers-color-scheme: dark) {
+  :root {
+    --font-primary: #ffffff;
+    --font-secondary: #1c1d1d;
+    --font-tertiary: #909090;
+    --bg-alert: #e30613;
+    --font-alert: #e30613;
+    --bg-primary: #434343;
+    --bg-secondary: #ffffff;
+    --bg-secondary-050: #434343;
+    --bg-tertiary: #1c1d1d;
+  }
+}

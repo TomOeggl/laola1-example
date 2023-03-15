@@ -2,7 +2,7 @@ header {
   display: flex;
   align-items: center;
   padding: 1rem 0 1rem 1rem;
-  background-color: var(--bg-dark);
+  background-color: var(--bg-secondary);
   justify-items: flex-start;
   overflow: hidden;
 }
@@ -17,7 +17,7 @@ header > *:last-child {
 }
 
 .banner__page-heading {
-  color: var(--font-color-light);
+  color: var(--font-secondary);
   font-weight: 700;
   font-style: italic;
   font-size: 1.5rem;
@@ -26,7 +26,7 @@ header > *:last-child {
 }
 
 .banner__nav {
-  color: var(--font-color-light);
+  color: var(--font-secondary);
   transform: rotate(90deg);
   font-weight: 400;
   font-size: 1.5rem;

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Overview</title>
+    <link rel="stylesheet" href="./css/liveticker.css" />
+    <script
+      src="https://kit.fontawesome.com/0a71cbb785.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <img src="./assets/laola1.png" class="banner__img" />
+      <span class="banner__page-heading">> Live</span>
+      <div class="banner__nav">I I</div>
+    </header>
+    <main>
+      <section>
+        <div class="breadcrumbs">
+          <span>LIVE</span>
+          <span>></span>
+          <span>Fußball</span>
+          <span>></span>
+          <span>Österreichische Bundesliga</span>
+        </div>
+        <div class="round-sidescroller">
+          <div class="round-sidescroller__round-indicator">
+            <span>20. Runde</span>
+            <p>6 Spiele</p>
+          </div>
+          <div
+            class="round-sidescroller__match round-sidescroller__match--selected"
+          >
+            <div class="round-sidescroller__home-team">
+              <img
+                src="./assets/club-logos/ried.png"
+                alt="Logo of SV Ried Football Club"
+              />
+              <h3 class="round-sidescroller__heading">SVR</h3>
+            </div>
+            <div
+              class="round-sidescroller__centered-info round-sidescroller__centered-info--live"
+            >
+              <p>live</p>
+              <p>1:3</p>
+            </div>
+            <div class="round-sidescroller__away-team">
+              <img
+                src="./assets/club-logos/fak.png"
+                alt="Logo of SV Ried Football Club"
+              />
+              <h3 class="round-sidescroller__heading">FAK</h3>
+            </div>
+          </div>
+          <div class="round-sidescroller__match">
+            <div class="round-sidescroller__home-team">
+              <img
+                src="./assets/club-logos/lustenau.png"
+                alt="Logo of SV Ried Football Club"
+              />
+              <h3 class="round-sidescroller__heading">ALU</h3>
+            </div>
+            <div
+              class="round-sidescroller__centered-info round-sidescroller__centered-info--live"
+            >
+              <p>live</p>
+              <p>0:2</p>
+            </div>
+            <div class="round-sidescroller__away-team">
+              <img
+                src="./assets/club-logos/sturm.png"
+                alt="Logo of SV Ried Football Club"
+              />
+              <h3 class="round-sidescroller__heading">STU</h3>
+            </div>
+          </div>
+          <div class="round-sidescroller__match">
+            <div class="round-sidescroller__home-team">
+              <img
+                src="./assets/club-logos/hartberg.png"
+                alt="Logo of SV Ried Football Club"
+              />
+              <h3 class="round-sidescroller__heading">HTB</h3>
+            </div>
+            <div
+              class="round-sidescroller__centered-info round-sidescroller__centered-info--scheduled"
+            >
+              <p>Morgen</p>
+              <p>14:30 Uhr</p>
+            </div>
+            <div class="round-sidescroller__away-team">
+              <img
+                src="./assets/club-logos/wolfsberger.png"
+                alt="Logo of SV Ried Football Club"
+              />
+              <h3 class="round-sidescroller__heading">WAC</h3>
+            </div>
+          </div>
+          <div class="round-sidescroller__match">
+            <div class="round-sidescroller__home-team">
+              <img
+                src="./assets/club-logos/klagenfurt.png"
+                alt="Logo of SV Ried Football Club"
+              />
+              <h3 class="round-sidescroller__heading">SKA</h3>
+            </div>
+            <div
+              class="round-sidescroller__centered-info round-sidescroller__centered-info--scheduled"
+            >
+              <p>Morgen</p>
+              <p>17:00 Uhr</p>
+            </div>
+            <div class="round-sidescroller__away-team">
+              <img
+                src="./assets/club-logos/altach.png"
+                alt="Logo of SV Ried Football Club"
+              />
+              <h3 class="round-sidescroller__heading">SCR</h3>
+            </div>
+          </div>
+        </div>
+        <div class="league-banner">
+          <div
+            class="league-banner__header league-banner__header--results-display"
+          >
+            <!-- <h2 class="league-banner__heading">BUNDESLIGA</h2>
+            <p class="league-banner__round">20. Runde</p> -->
+            <div class="league-banner__home-team">
+              <div class="league-banner__home-team">
+                <img
+                  src="./assets/club-logos/ried.png"
+                  alt="Logo of SV Ried Football Club"
+                />
+                <h3 class="league-banner__club">SVR</h3>
+              </div>
+            </div>
+            <div class="league-banner__results">
+              <p>live</p>
+              <p>1:3</p>
+              <p>(1:1, 0:2)</p>
+            </div>
+            <div class="league-banner__away-team">
+              <div class="league-banner__away-team">
+                <img
+                  src="./assets/club-logos/fak.png"
+                  alt="Logo of SV Ried Football Club"
+                />
+                <h3 class="league-banner__club">FAK</h3>
+              </div>
+            </div>
+            <div class="league-banner__home-team-points">
+              <p class="league-banner__away-team-goal-line">
+                <b>22'</b> S. Nutz
+                <img src="./assets/icons/goal.svg" alt="icon of goal" />
+              </p>
+            </div>
+            <p class="league-banner__points-separator">TORE</p>
+            <div class="league-banner__away-team-points">
+              <p class="league-banner__away-team-goal-line">
+                <img src="./assets/icons/goal.svg" alt="icon of goal" /> H.
+                Tabakovic <b>33'</b>
+              </p>
+              <p class="league-banner__away-team-goal-line">
+                <img src="./assets/icons/goal.svg" alt="icon of goal" /> J.Turi
+                (ET) <b>56'</b>
+              </p>
+              <p class="league-banner__away-team-goal-line">
+                <img src="./assets/icons/goal.svg" alt="icon of goal" /> A.
+                Gruber <b>82'</b>
+              </p>
+            </div>
+          </div>
+          <div class="league-banner__nav-container">
+            <span
+              ><img
+                src="./assets/icons/comment.svg"
+                alt="Calendar icon"
+              />LIVETICKER</span
+            >
+            <span
+              ><img
+                src="./assets/icons/matchfield-outline.svg"
+                alt="Conference icon"
+              />AUFSTELLUNG</span
+            >
+            <span
+              ><img
+                src="./assets/icons/info.svg"
+                alt="Score icon"
+              />DETAILS</span
+            >
+            <span
+              ><img
+                src="./assets/icons/list.svg"
+                alt="Results table icon"
+              />TABELLE</span
+            >
+          </div>
+        </div>
+
+        <div class="ticker-section-container">
+          <div class="ticker-nav">
+            <span><img src="/assets/icons/list.svg" /> ALLE</span>
+            <span><img src="/assets/icons/list.svg" /> HIGHLIGHTS</span>
+            <span><img src="/assets/icons/goal.svg" /> TORE</span>
+            <span><img src="/assets/icons/list.svg" /> KARTEN</span>
+            <span><img src="/assets/icons/list.svg" /> WECHSEL</span>
+
+            <input type="search" placeholder="SUCHEN..." />
+          </div>
+          <div class="ticker-feed-container">
+            <div class="ticker-update">
+              <p class="ticker-update__time">VOR 23 STUNDEN</p>
+              <h3 class="ticker-update__heading">Spielende</h3>
+              <p class="ticker-update__text-content">
+                Das Spiel in Innsbruck endet mit 3:2 für LASK
+              </p>
+              <span
+                ><img
+                  class="ticker-update__icon"
+                  src="/assets/icons/list.svg"
+                  alt=""
+              /></span>
+            </div>
+            <div class="ticker-update">
+              <p class="ticker-update__time">VOR 23 STUNDEN</p>
+              <h3 class="ticker-update__heading">Spielende</h3>
+              <p class="ticker-update__text-content">
+                Das Spiel in Innsbruck endet mit 3:2 für LASK
+              </p>
+              <span>
+                <img
+                  class="ticker-update__club-logo"
+                  src="/assets/club-logos/klagenfurt.png"
+                  alt="" /><img
+                  class="ticker-update__icon"
+                  src="/assets/icons/list.svg"
+                  alt=""
+              /></span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <img src="./assets/l1_new.svg" />
+      <div class="footer-flex-container">
+        <div class="footer-column">
+          <p>
+            Alle Rechte vorbehalten. Für die Angaben auf dieser Webseite besteht
+            gänzlicher Haftungsausschluss und Urheberrechtsschutz.
+          </p>
+          <p>© 2023 Sportradar Media Services GmbH</p>
+          <ul class="socials-row">
+            <li><img src="/assets/socials/facebook.svg" /></li>
+            <li><img src="/assets/socials/instagram.svg" /></li>
+            <li><img src="/assets/socials/linked-in.svg" /></li>
+            <li><img src="/assets/socials/social-tiktok.svg" /></li>
+            <li><img src="/assets/socials/twitter.svg" /></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4 class="footer-column__heading">Service & Tools</h4>
+          <ul>
+            <li class="footer-column__link">ski1.at</li>
+            <li class="footer-column__link">Sportwetten</li>
+            <li class="footer-column__link">TV-Programm</li>
+            <li class="footer-column__link">Videos</li>
+            <li class="footer-column__link">Social Wall</li>
+            <li class="footer-column__link">SMS-Services</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4 class="footer-column__heading">Service & Tools</h4>
+          <ul>
+            <li class="footer-column__link">Kontakt</li>
+            <li class="footer-column__link">Über LAOLA1</li>
+            <li class="footer-column__link">Karriere bei LAOLA1</li>
+            <li class="footer-column__link">Presse</li>
+            <li class="footer-column__link">AGB</li>
+            <li class="footer-column__link">Impressum</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4 class="footer-column__heading">Datenschutz</h4>
+          <ul>
+            <li class="footer-column__link">Datenschutzrichtlinie</li>
+            <li class="footer-column__link">Cookie-Erklärung</li>
+            <li class="footer-column__link">Cookie Opt-Out</li>
+            <li class="footer-column__link">Einstellungen</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>

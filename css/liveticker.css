@@ -166,142 +166,93 @@
   color: var(--font-alert);
 }
 
-.card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-
-  gap: 16px;
-}
-
-.card {
-  border-radius: 4px;
-  background-color: var(--font-secondary);
+.ticker-section-container {
+  background-color: var(--bg-primary);
   padding: 24px;
-  overflow: hidden;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.card:first-child {
-  grid-row: 1 / span 2;
-}
-
-.card__map {
-  padding: 0px;
-  margin: 0px;
-  width: 100%;
-  height: 100%;
-  object-fit: scale-down;
-}
-
-.card__heading {
-  padding: 0 0 16px 0;
-  font-size: 1.5rem;
-  font-weight: 700;
-  border-bottom: 1px solid var(--font-tertiary);
-  font-style: italic;
-}
-
-.card__heading > img {
-  object-fit: contain;
-  height: 1.2rem;
-  width: 1.2rem;
-  margin-right: 8px;
-}
-
-.card:last-child img {
-  background: var(--bg-secondary);
-}
-
-.card__text-content {
-  font-size: 1.2rem;
-  padding: 16px 0 8px 0;
-}
-
-.table-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(6, 44px);
-  font-style: italic;
-  margin: 24px 0 48px 0;
-
-  overflow: hidden;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-
-.table-container > * {
+.ticker-nav {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+  flex-wrap: wrap;
+  gap: 8px;
+  overflow-x: scroll;
+  margin-bottom: 16px;
+  font-style: italic;
+  font-weight: 600;
 }
-
-.table-row__heading {
-  grid-column: 1 / -1;
-  justify-self: center;
-  background-color: var(--bg-secondary);
-  color: var(--font-secondary);
-  font-size: 0.9rem;
-  padding: auto 100%;
-}
-
-.table-row__heading img {
-  background: var(--bg-secondary);
-}
-
-.table-row__club-logo {
-  object-fit: contain;
-  height: 100%;
-  padding: 4px;
-}
-
-.table-row__title {
-  background: var(--bg-secondary-050) 0% 0% no-repeat padding-box;
-  color: var(--font-secondary);
-}
-
-.table-row__heading + .table-row__title {
-  grid-column: 1/2;
-}
-
-/* added code  */
-.table-row__date:nth-child(even),
-.table-row__season:nth-child(odd),
-.table-row__club-logo:nth-child(even),
-.table-row__result:nth-child(odd) {
-  background-color: var(--font-secondary);
-}
-
-.table-row__date {
+.ticker-nav::-webkit-scrollbar {
   display: none;
 }
 
-.table-row__season {
+.ticker-nav span {
+  min-width: fit-content;
+  padding: 12px 8px;
+  border-radius: 4px;
+  color: var(--font-primary);
+  background-color: var(--bg-tertiary);
+}
+
+.ticker-nav input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--bg-tertiary);
+}
+
+.ticker-nav input::placeholder {
+  font-weight: 600;
+  font-style: italic;
+}
+
+.ticker-feed-container {
+}
+.ticker-update {
+  position: relative;
+  border-left: 1px dashed var(--bg-secondary-050);
+  margin-left: 32px;
+  border-bottom: 1px solid var(--bg-tertiary);
+  padding: 24px;
+}
+
+.ticker-update__time {
+  font-size: 0.75rem;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.ticker-update__heading {
+  font-style: italic;
+  padding: 12px 0;
+}
+.ticker-update__text-content {
+  font-size: 1rem;
+  padding: 4px 0;
+}
+
+.ticker-update__icon {
+  background-color: var(--bg-primary);
+  position: absolute;
+  max-width: 24px;
+  min-width: 24px;
+  max-height: 24px;
+  min-height: 24px;
+  padding: 4px;
+  left: -12px;
+  top: 18px;
+}
+.ticker-update__club-logo {
+  background-color: var(--bg-primary);
+  position: absolute;
+  max-width: 28px;
+  min-width: 28px;
+  max-height: 28px;
+  min-height: 28px;
+  padding: 4px;
+  left: -44px;
+  top: 16px;
 }
 
 @media screen and (min-width: 600px) {
   .league-banner__nav-container {
     justify-content: space-around;
-  }
-
-  .card-container {
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    margin: 8px 0;
-  }
-
-  .table-container {
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(6, 44px);
-    border-radius: 4px;
-  }
-
-  .table-row__heading + .table-row__title {
-    grid-column: 1/3;
-    padding-left: 30%;
-  }
-
-  .table-row__date {
-    display: flex;
-    justify-content: left;
-    padding-left: 4px;
   }
 }
