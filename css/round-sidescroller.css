@@ -4,6 +4,11 @@
   margin-bottom: 16px;
   font-style: italic;
   overflow-x: scroll;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.round-sidescroller::-webkit-scrollbar {
+  display: none;
 }
 
 .round-sidescroller > * {

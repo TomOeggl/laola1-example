@@ -4,6 +4,7 @@ header {
   padding: 1rem 0 1rem 1rem;
   background-color: var(--bg-dark);
   justify-items: flex-start;
+  overflow: hidden;
 }
 
 header > *:last-child {

@@ -24,6 +24,7 @@
   border-radius: 8px;
   color: var(--font-color-light);
   margin-bottom: 16px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .league-banner__header {
@@ -124,12 +125,16 @@
 .league-banner__nav-container {
   background: #1c1d1d 0% 0% no-repeat padding-box;
   display: flex;
-  justify-content: space-around;
   font-weight: 600;
   padding: 16px 0;
   border-radius: 0 0 4px 4px;
   overflow-x: scroll;
 }
+
+.league-banner__nav-container::-webkit-scrollbar {
+  display: none;
+}
+
 .league-banner__nav-container img {
   padding-right: 8px;
 }
@@ -160,8 +165,8 @@
 
 .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-  margin: 8px 0;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+
   gap: 16px;
 }
 
@@ -170,6 +175,7 @@
   background-color: var(--font-color-light);
   padding: 24px;
   overflow: hidden;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .card:first-child {
@@ -210,13 +216,20 @@
 
 .table-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(6, 44px);
   font-style: italic;
+  margin: 24px 0 48px 0;
+
+  overflow: hidden;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+
 .table-container > * {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .table-row__heading {
@@ -243,11 +256,49 @@
   color: var(--font-color-light);
 }
 
+.table-row__heading + .table-row__title {
+  grid-column: 1/2;
+}
+
+/* added code  */
 .table-row__date:nth-child(even),
-.table-row__season:nth-child(even),
+.table-row__season:nth-child(odd),
 .table-row__club-logo:nth-child(even),
-.table-row__result:nth-child(even) {
+.table-row__result:nth-child(odd) {
   background-color: var(--font-color-light);
 }
+
+.table-row__date {
+  display: none;
+}
+
 .table-row__season {
+}
+
+@media screen and (min-width: 600px) {
+  .league-banner__nav-container {
+    justify-content: space-around;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    margin: 8px 0;
+  }
+
+  .table-container {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 44px);
+    border-radius: 4px;
+  }
+
+  .table-row__heading + .table-row__title {
+    grid-column: 1/3;
+    padding-left: 30%;
+  }
+
+  .table-row__date {
+    display: flex;
+    justify-content: left;
+    padding-left: 4px;
+  }
 }
