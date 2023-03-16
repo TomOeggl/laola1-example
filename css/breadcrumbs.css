@@ -1,0 +1,10 @@
+.breadcrumbs {
+  color: var(--font-tertiary);
+  font-style: italic;
+  font-weight: 500;
+  margin: 32px 0;
+}
+
+.breadcrumbs > * {
+  padding: 0 4px;
+}

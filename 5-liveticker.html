@@ -13,9 +13,13 @@
   </head>
   <body>
     <header>
-      <img src="./assets/laola1.png" class="banner__img" />
-      <span class="banner__page-heading">> Live</span>
-      <div class="banner__nav">I I</div>
+      <div class="banner__left-nav-container">
+        <img src="./assets/laola1.png" class="banner__img" />
+        <span class="left_nav_span">> Live</span>
+      </div>
+      <div class="banner__right-nav-container">
+        <div>l l</div>
+      </div>
     </header>
     <main>
       <section>
@@ -131,10 +135,10 @@
             <div class="league-banner__home-team">
               <div class="league-banner__home-team">
                 <img
-                  src="./assets/club-logos/ried.png"
+                  src="./assets/club-logos/tirol.png"
                   alt="Logo of SV Ried Football Club"
                 />
-                <h3 class="league-banner__club">SVR</h3>
+                <h3 class="league-banner__club">WSG Tirol</h3>
               </div>
             </div>
             <div class="league-banner__results">
@@ -145,10 +149,10 @@
             <div class="league-banner__away-team">
               <div class="league-banner__away-team">
                 <img
-                  src="./assets/club-logos/fak.png"
+                  src="./assets/club-logos/lask.png"
                   alt="Logo of SV Ried Football Club"
                 />
-                <h3 class="league-banner__club">FAK</h3>
+                <h3 class="league-banner__club">LASK</h3>
               </div>
             </div>
             <div class="league-banner__home-team-points">
@@ -194,7 +198,7 @@
             >
             <span
               ><img
-                src="./assets/icons/list.svg"
+                src="./assets/icons/list--white.svg"
                 alt="Results table icon"
               />TABELLE</span
             >
@@ -204,12 +208,17 @@
         <div class="ticker-section-container">
           <div class="ticker-nav">
             <span><img src="/assets/icons/list.svg" /> ALLE</span>
-            <span><img src="/assets/icons/list.svg" /> HIGHLIGHTS</span>
+            <span><img src="/assets/icons/favorite@2x.png" /> HIGHLIGHTS</span>
             <span><img src="/assets/icons/goal.svg" /> TORE</span>
-            <span><img src="/assets/icons/list.svg" /> KARTEN</span>
-            <span><img src="/assets/icons/list.svg" /> WECHSEL</span>
+            <span><img src="/assets/icons/cards@2x.png" /> KARTEN</span>
+            <span><img src="/assets/icons/substitution@2x.png" /> WECHSEL</span>
 
-            <input type="search" placeholder="SUCHEN..." />
+            <span class="ticker-nav__input-span"
+              ><img
+                class="ticker-nav__input-icon"
+                src="./assets/icons/search@2x.png" />
+              <input type="search" placeholder="SUCHEN..."
+            /></span>
           </div>
           <div class="ticker-feed-container">
             <div class="ticker-update">
@@ -221,7 +230,7 @@
               <span
                 ><img
                   class="ticker-update__icon"
-                  src="/assets/icons/list.svg"
+                  src="/assets/icons/whistle@2x.png"
                   alt=""
               /></span>
             </div>
@@ -237,10 +246,143 @@
                   src="/assets/club-logos/klagenfurt.png"
                   alt="" /><img
                   class="ticker-update__icon"
-                  src="/assets/icons/list.svg"
+                  src="/assets/icons/icomoon@2x.png"
                   alt=""
               /></span>
             </div>
+            <div class="ticker-update">
+              <p class="ticker-update__time">90+7'</p>
+              <h3 class="ticker-update__heading">Freistoß</h3>
+              <p class="ticker-update__text-content">
+                Freistoß für LASK in der eigenen Hälfte
+              </p>
+              <span>
+                <img
+                  class="ticker-update__club-logo"
+                  src="/assets/club-logos/lask.png"
+                  alt="" /><img
+                  class="ticker-update__icon"
+                  src="/assets/icons/icomoon@2x.png"
+                  alt=""
+              /></span>
+            </div>
+            <div class="ticker-update">
+              <p class="ticker-update__time">90+5'</p>
+              <h3 class="ticker-update__heading">Abstoß</h3>
+              <p class="ticker-update__text-content">
+                Josef Spurny zeigt auf Abstoß für LASK
+              </p>
+              <span>
+                <img
+                  class="ticker-update__club-logo"
+                  src="/assets/club-logos/lask.png"
+                  alt="" /><img
+                  class="ticker-update__icon"
+                  src="/assets/icons/icomoon@2x.png"
+                  alt=""
+              /></span>
+            </div>
+            <div class="ticker-update">
+              <p class="ticker-update__time">90+4'</p>
+              <h3 class="ticker-update__heading">Gelbe Karte</h3>
+              <p class="ticker-update__text-content">
+                Gelbe Karte in Innsbruck: Felix Luckeneder (LASK) wird von
+                Schiri Josef Spurny verwarnt.
+              </p>
+              <span>
+                <img
+                  class="ticker-update__club-logo"
+                  src="/assets/club-logos/lask.png"
+                  alt="" /><img
+                  class="ticker-update__icon"
+                  src="/assets/icons/wh.svg"
+                  alt=""
+              /></span>
+            </div>
+            <div class="ticker-update">
+              <p class="ticker-update__time">90+4'</p>
+              <h3 class="ticker-update__heading">Abstoß</h3>
+              <p class="ticker-update__text-content">
+                Nach der letzten Aktion hat LASK den Abstoß.
+              </p>
+              <span>
+                <img
+                  class="ticker-update__club-logo"
+                  src="/assets/club-logos/lask.png"
+                  alt="" /><img
+                  class="ticker-update__icon"
+                  src="/assets/icons/icomoon@2x.png"
+                  alt=""
+              /></span>
+            </div>
+            <div class="ticker-update">
+              <p class="ticker-update__time">90+2'</p>
+              <h3 class="ticker-update__heading">Freistoß</h3>
+              <p class="ticker-update__text-content">
+                Die Auswärtsmannschaft wechselt Aleksandar Jukic aus und bringen
+                Matteo Meisl.
+              </p>
+              <span>
+                <img
+                  class="ticker-update__club-logo"
+                  src="/assets/club-logos/tirol.png"
+                  alt="" /><img
+                  class="ticker-update__icon"
+                  src="/assets/icons/icomoon@2x.png"
+                  alt=""
+              /></span>
+            </div>
+            <div class="ticker-update">
+              <p class="ticker-update__time">90+1'</p>
+              <h3 class="ticker-update__heading">Nachspielzeit: 6 Minuten</h3>
+
+              <span>
+                <img
+                  class="ticker-update__club-logo"
+                  src="/assets/club-logos/lask.png"
+                  alt="" /><img
+                  class="ticker-update__icon"
+                  src="/assets/icons/icomoon@2x.png"
+                  alt=""
+              /></span>
+            </div>
+            <div class="ticker-update">
+              <p class="ticker-update__time">90'</p>
+              <h3 class="ticker-update__heading">Tor für LASK! 2:3</h3>
+              <p class="ticker-update__text-content">
+                Tor in Innsbruck! LASK macht das 3-2. Robert Zuji erzielt die
+                Führung.
+              </p>
+              <span>
+                <img
+                  class="ticker-update__club-logo"
+                  src="/assets/club-logos/lask.png"
+                  alt="" /><img
+                  class="ticker-update__icon"
+                  src="/assets/icons/goal@2x.png"
+                  alt=""
+              /></span>
+            </div>
+            <div class="ticker-update">
+              <p class="ticker-update__time">89'</p>
+              <h3 class="ticker-update__heading">Wechsel bei LASK</h3>
+              <p class="ticker-update__text-content">
+                LASK hat Moses Usor ausgewechselt. Adil Taoui ist jetzt im
+                Spiel. Das war der vierte Wechsel von Coach Dietmar Kühbauer.
+              </p>
+              <span>
+                <img
+                  class="ticker-update__club-logo"
+                  src="/assets/club-logos/lask.png"
+                  alt="" /><img
+                  class="ticker-update__icon"
+                  src="/assets/icons/substitution@2x.png"
+                  alt=""
+              /></span>
+            </div>
+            <button class="ticker-update__btn-show-more" type="button">
+              MEHR ANZEIGEN
+            </button>
           </div>
         </div>
       </section>
