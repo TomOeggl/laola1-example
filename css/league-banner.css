@@ -1,8 +1,8 @@
 .league-banner {
-  border-radius: 8px;
   color: var(--font-secondary);
+  border-radius: 8px;
   margin-bottom: 16px;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: var(--box-shadow);
 }
 
 .league-banner__header {
@@ -14,7 +14,8 @@
     0% 0% no-repeat padding-box;
   border-radius: 4px 4px 0 0;
 }
-.league-banner__header h3 {
+.league-banner__heading,
+.league-banner__club {
   color: var(--font-secondary);
 }
 .league-banner__header--results-display {
@@ -38,8 +39,8 @@
 .league-banner__home-team > img,
 .league-banner__away-team > img {
   object-fit: fill;
-  width: 4rem;
-  height: 4rem;
+  width: 64px;
+  height: 64px;
   margin: 0 auto 8px auto;
 }
 
@@ -47,34 +48,29 @@
   grid-area: b;
 }
 
+.league-banner__results > * {
+  padding: 0.3rem;
+}
+
 .league-banner__results :nth-child(1) {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  width: fit-content;
+  margin: 0 auto;
   background-color: var(--bg-alert);
   border-radius: 0.2rem;
   transform: skewX(-10deg);
-  text-transform: uppercase;
-  color: var(--font-secondary);
-  padding: 0.2rem;
-  font-weight: 600;
-  font-size: small;
-  text-align: center;
-  width: fit-content;
-  margin: 0 auto;
 }
 .league-banner__results :nth-child(2) {
-  color: var(--font-secondary);
-  font-weight: 800;
-  padding: 0.2rem;
-  text-align: center;
-  font-style: italic;
   font-size: 2rem;
+  font-weight: 800;
 }
 .league-banner__results :last-child {
   color: var(--font-tertiary);
-  font-weight: 400;
-  padding: 0.2rem;
-  text-align: center;
-  font-style: italic;
   font-size: 1rem;
+  font-weight: 400;
 }
 
 .league-banner__away-team {
@@ -93,20 +89,26 @@
 }
 .league-banner__away-team-points {
   grid-area: f;
-  text-align: left;
   color: var(--font-tertiary);
+  text-align: left;
   line-height: 1.5;
 }
 
+.league-banner__away-team-points img,
+.league-banner__home-team-points img {
+  filter: var(--filter-black-to-white);
+}
+
 .league-banner__heading {
-  padding: 12px;
   font-size: 2.5rem;
   font-weight: 900;
+  padding: 12px;
 }
 .league-banner__nav-container {
-  background: var(--bg-secondary) 0% 0% no-repeat padding-box;
   display: flex;
   font-weight: 600;
+
+  background: var(--bg-secondary) 0% 0% no-repeat padding-box;
   padding: 16px 0;
   border-radius: 0 0 4px 4px;
   overflow-x: scroll;
@@ -118,7 +120,6 @@
 
 .league-banner__nav-container img {
   padding-right: 8px;
-  color: white;
 }
 .league-banner__nav-container > * {
   padding: 0 12px;
@@ -127,8 +128,7 @@
 }
 
 .league-banner__nav-container > span:hover {
-  filter: invert(36%) sepia(99%) saturate(4659%) hue-rotate(340deg)
-    brightness(79%) contrast(134%);
+  filter: var(--filter-white-to-red);
   position: relative;
 }
 
@@ -142,9 +142,6 @@
   bottom: -18px;
 }
 
-.league-banner__nav-container img {
-  color: var(--font-alert);
-}
 
 @media (prefers-color-scheme: dark) {
   .league-banner__header {
@@ -160,6 +157,20 @@
   }
   .league-banner__nav-container {
     background-color: var(--font-tertiary);
+  }
+  .league-banner__nav-container img{
+    filter: var(--filter-white-to-black);
+  }
+  .league-banner__home-team-points,
+  .league-banner__away-team-points {
+    color: var(--font-secondary);
+  }
+  .league-banner__away-team-points img,
+  .league-banner__home-team-points img {
+    filter: unset;
+  }
+  .league-banner__results :last-child {
+    color: var(--font-secondary);
   }
 }
 

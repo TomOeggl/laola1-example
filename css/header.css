@@ -2,7 +2,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--bg-secondary);
+  background-color:#1C1D1D;
   overflow: hidden;
 }
 .banner__left-nav-container {
@@ -34,20 +34,19 @@ header {
   max-width: 200px;
 }
 
-.banner__page-heading {
-  color: var(--font-primary);
-  font-weight: 700;
-  font-style: italic;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  padding-left: 1rem;
+/*Added headerspecific changes to dark mode*/
+
+@media (prefers-color-scheme: dark) {
+  header {
+    border-bottom: 2px solid var(--bg-secondary);
+  }
+
+  .banner__left-nav-container {
+    color: var(--font-primary);
+  }
+
+  .banner__right-nav-container {
+    color: var(--font-primary);
+  }
 }
 
-.banner__nav {
-  color: var(--font-primary);
-  transform: rotate(90deg);
-  font-weight: 400;
-  font-size: 1.5rem;
-  padding-right: 1rem;
-  padding-top: 3rem;
-}

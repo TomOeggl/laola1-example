@@ -6,39 +6,36 @@
 @import "./league-banner.css";
 @import "./footer.css";
 
-* {
-  padding: 0px;
-  margin: 0px;
-}
-
 .ticker-section-container {
   background-color: var(--bg-primary);
   padding: 24px;
   margin: 16px 0 64px 0;
   border-radius: 4px;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: var(--box-shadow);
 }
 
 .ticker-nav {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  align-items: center;
   overflow-x: scroll;
   margin-bottom: 16px;
+
   font-style: italic;
   font-weight: 600;
-  align-items: center;
 }
 .ticker-nav::-webkit-scrollbar {
   display: none;
 }
 
 .ticker-nav span {
-  min-width: fit-content;
-  padding: 16px 12px;
-  border-radius: 4px;
   color: var(--font-primary);
+  
   background-color: var(--bg-tertiary);
+  padding: 16px 12px;
+  min-width: fit-content;
+  border-radius: 4px;
 }
 
 .ticker-nav img {
@@ -47,11 +44,19 @@
 }
 
 .ticker-nav input {
-  background-color: var(--bg-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  font-style: italic;
+
   width: 100%;
+  background-color: var(--bg-primary);
   padding: 16px 8px 16px 32px;
   border: 2px solid var(--bg-tertiary);
   border-radius: 4px;
+}
+
+.ticker-nav input:focus{
+  outline: none;
 }
 
 span.ticker-nav__input-span {
@@ -61,6 +66,7 @@ span.ticker-nav__input-span {
 }
 
 .ticker-nav input::placeholder {
+  font-size: 1rem;
   font-weight: 600;
   font-style: italic;
 }
@@ -68,16 +74,16 @@ span.ticker-nav__input-span {
 .ticker-nav__input-icon {
   object-fit: contain;
   position: absolute;
-  top: 18px;
+  top: 20px;
   left: 14px;
 }
 
 .ticker-update {
   position: relative;
-  border-left: 1px dashed var(--bg-secondary-050);
   margin-left: 32px;
-  border-bottom: 1px solid var(--bg-tertiary);
   padding: 24px;
+  border-left: 1px dashed var(--bg-secondary-050);
+  border-bottom: 1px solid var(--bg-tertiary);
 }
 
 .ticker-update__time {
@@ -98,49 +104,58 @@ span.ticker-nav__input-span {
   padding: 4px 0;
 }
 
-.ticker-update span {
+.ticker-update span{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 16px;
+  left: -40px;
   background-color: var(--bg-primary);
 }
 
+.ticker-update:nth-of-type(1) span{
+  left: -12px;
+}
+
 .ticker-update__icon {
-  position: absolute;
   max-width: 24px;
   min-width: 24px;
   max-height: 24px;
   min-height: 24px;
   padding: 4px;
-  left: -12px;
-  top: 18px;
 }
 .ticker-update__club-logo {
-  background-color: var(--bg-primary);
-  position: absolute;
   max-width: 28px;
   min-width: 28px;
   max-height: 28px;
   min-height: 28px;
   padding: 4px;
-  left: -44px;
-  top: 16px;
 }
 
 .ticker-update__btn-show-more {
-  background-color: var(--bg-primary);
-  color: var(--font-alert);
-  border: 2px solid var(--font-alert);
-  border-radius: 4px;
-  font-style: italic;
-  font-weight: 700;
-  padding: 12px 48px;
-  margin: 12px auto;
   display: flex;
   justify-self: center;
+  
+  color: var(--font-alert);
+  font-style: italic;
+  font-weight: 700;
+
+  background-color: var(--bg-primary);
+  padding: 12px 48px;
+  margin: 12px auto;
+
+  border: 2px solid var(--font-alert);
+  border-radius: 4px;
+}
+
+.ticker-update__btn-show-more:hover {
+  color: var(--font-secondary);
+  background-color: var(--bg-alert);
 }
 
 @media (prefers-color-scheme: dark) {
   .ticker-nav img {
-    filter: invert(100%) sepia(5%) saturate(7487%) hue-rotate(300deg)
-      brightness(106%) contrast(119%);
+    filter: var(--filter-black-to-white);
   }
   .ticker-nav input {
     color: var(--font-primary);
@@ -148,12 +163,17 @@ span.ticker-nav__input-span {
   .ticker-nav input::placeholder {
     color: var(--font-primary);
   }
+  img.ticker-nav__input-icon{
+    filter: unset;
+  }
   .ticker-update {
     border-left: 1px dashed var(--font-primary);
   }
   .ticker-update__icon {
-    filter: invert(100%) sepia(5%) saturate(7487%) hue-rotate(300deg)
-      brightness(106%) contrast(119%);
+    filter: var(--filter-black-to-white);
+  }
+  .ticker-update__icon--no-filter{
+    filter: unset;
   }
 }
 
