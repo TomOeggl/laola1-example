@@ -7,7 +7,7 @@ footer {
     #d40a20 66%,
     #9c0110 100%
   );
-  color: var(--font-color-light);
+  color: #fff;
   padding: 3rem 5rem 3rem 3rem;
   font-style: italic;
 }
@@ -37,22 +37,24 @@ footer ul {
 .socials-row {
   display: flex;
   flex-direction: row;
+  margin-top: 8px;
 }
 
 .socials-row > * {
   flex-basis: 2rem;
 }
 
-.footer-column li {
+.footer-column .footer-column__link {
   display: none;
 }
+
 
 .footer-column__heading {
   text-transform: uppercase;
 }
 
 @media (min-width: 600px) {
-  .footer-column li {
+  .footer-column .footer-column__link  {
     display: block;
   }
 }

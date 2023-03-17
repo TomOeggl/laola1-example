@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Overview</title>
-    <link rel="stylesheet" href="./css/bundesliga-conference.css" />
+    <link
+      rel="stylesheet"
+      href="./css/match-live-details.css"
+    />
     <script
       src="https://kit.fontawesome.com/0a71cbb785.js"
       crossorigin="anonymous"
@@ -13,9 +16,13 @@
   </head>
   <body>
     <header>
-      <img src="./assets/laola1.png" class="banner__img" />
-      <span class="banner__page-heading">> Live</span>
-      <div class="banner__nav">I I</div>
+      <div class="banner__left-nav-container">
+        <img src="./assets/laola1.png" class="banner__img" />
+        <span class="left_nav_span">> Live</span>
+      </div>
+      <div class="banner__right-nav-container">
+        <div>l l</div>
+      </div>
     </header>
     <main>
       <section>
@@ -31,7 +38,9 @@
             <span>20. Runde</span>
             <p>6 Spiele</p>
           </div>
-          <div class="round-sidescroller__match">
+          <div
+            class="round-sidescroller__match round-sidescroller__match--selected"
+          >
             <div class="round-sidescroller__home-team">
               <img
                 src="./assets/club-logos/ried.png"
@@ -121,22 +130,72 @@
           </div>
         </div>
         <div class="league-banner">
-          <div class="league-banner__header">
-            <h2 class="league-banner__heading">BUNDESLIGA</h2>
-            <p class="league-banner__round">20. Runde</p>
+          <div
+            class="league-banner__header league-banner__header--results-display"
+          >
+            <div class="league-banner__home-team">
+              <div class="league-banner__home-team">
+                <img
+                  src="./assets/club-logos/ried.png"
+                  alt="Logo of SV Ried Football Club"
+                />
+                <h3 class="league-banner__club">SVR</h3>
+              </div>
+            </div>
+            <div class="league-banner__results">
+              <p>live</p>
+              <p>1:3</p>
+              <p>(1:1, 0:2)</p>
+            </div>
+            <div class="league-banner__away-team">
+              <div class="league-banner__away-team">
+                <img
+                  src="./assets/club-logos/fak.png"
+                  alt="Logo of SV Ried Football Club"
+                />
+                <h3 class="league-banner__club">FAK</h3>
+              </div>
+            </div>
+            <div class="league-banner__home-team-points">
+              <p class="league-banner__away-team-goal-line">
+                <b>22'</b> S. Nutz
+                <img src="./assets/icons/goal.svg" alt="icon of goal" />
+              </p>
+            </div>
+            <p class="league-banner__points-separator">TORE</p>
+            <div class="league-banner__away-team-points">
+              <p class="league-banner__away-team-goal-line">
+                <img src="./assets/icons/goal.svg" alt="icon of goal" /> H.
+                Tabakovic <b>33'</b>
+              </p>
+              <p class="league-banner__away-team-goal-line">
+                <img src="./assets/icons/goal.svg" alt="icon of goal" /> J.Turi
+                (ET) <b>56'</b>
+              </p>
+              <p class="league-banner__away-team-goal-line">
+                <img src="./assets/icons/goal.svg" alt="icon of goal" /> A.
+                Gruber <b>82'</b>
+              </p>
+            </div>
           </div>
           <div class="league-banner__nav-container">
             <span
               ><img
-                src="./assets/icons/calendar.svg"
+                src="./assets/icons/comment.svg"
                 alt="Calendar icon"
-              />SPIELPLAN</span
+              />LIVETICKER</span
             >
             <span
               ><img
-                src="./assets/icons/reply.svg"
+                src="./assets/icons/matchfield-outline.svg"
                 alt="Conference icon"
-              />LIVE-KONFERENZ</span
+              />AUFSTELLUNG</span
+            >
+            <span
+              ><img
+                src="./assets/icons/info.svg"
+                alt="Score icon"
+              />DETAILS</span
             >
             <span
               ><img
@@ -144,159 +203,102 @@
                 alt="Results table icon"
               />TABELLE</span
             >
-            <span
-              ><img
-                src="./assets/icons/podium-outline.svg"
-                alt="Score icon"
-              />SCORE</span
-            >
           </div>
         </div>
-        <div>
-          <div class="match">
-            <div class="match__home-team">
-              <img
-                src="./assets/club-logos/ried.png"
-                alt="Logo of SV Ried Football Club"
-              />
-              <h3 class="match__heading">SV Ried</h3>
-            </div>
-            <div class="match__centered-info match__centered-info--live">
-              <p>jetzt live</p>
-              <p>1:3</p>
-              <p>(1:1, 0:2)</p>
-            </div>
-            <div class="match__away-team">
-              <h3 class="match__heading">FK Austria Wien</h3>
-              <img
-                src="./assets/club-logos/fak.png"
-                alt="Logo of SV Ried Football Club"
-              />
-              <i class="fa-solid fa-angle-right match__arrow"></i>
-            </div>
+        <div class="card-container">
+          <div class="card">
+            <h3 class="card__heading">
+              <img src="./assets/icons/maps.svg" alt="" />Spielort
+            </h3>
+            <img class="card__map" src="./assets/map-resized.jpg" />
+            <img class="card__pointer" />
           </div>
-          <div class="match">
-            <div class="match__home-team">
-              <img
-                src="./assets/club-logos/lustenau.png"
-                alt="Logo of SV Ried Football Club"
-              />
-              <h3 class="match__heading">SC Austria Lustenau</h3>
-            </div>
-            <div class="match__centered-info match__centered-info--live">
-              <p>jetzt live</p>
-              <p>0:2</p>
-              <p>(0:0, 0:2)</p>
-            </div>
-            <div class="match__away-team">
-              <h3 class="match__heading">SK Sturm Graz</h3>
-              <img
-                src="./assets/club-logos/sturm.png"
-                alt="Logo of SV Ried Football Club"
-              />
-              <i class="fa-solid fa-angle-right match__arrow"></i>
-            </div>
+          <div class="card">
+            <h3 class="card__heading">
+              <img src="./assets/icons/jersey-stripes.svg" />Schiedsrichter
+            </h3>
+            <p class="card__text-content">Christoph Jäger(MR)</p>
           </div>
-          <div class="match">
-            <div class="match__home-team">
-              <img
-                src="./assets/club-logos/hartberg.png"
-                alt="Logo of SV Ried Football Club"
-              />
-              <h3 class="match__heading">TSV Hartberg</h3>
-            </div>
-            <div class="match__centered-info match__centered-info--scheduled">
-              <p>
-                <img src="./assets/icons/clock.png" alt="A clock Icon" /> in 21
-                Stunden
-              </p>
-              <p>Samstag, 4. März</p>
-              <p>14:30 Uhr</p>
-            </div>
-            <div class="match__away-team">
-              <h3 class="match__heading">Wolfsberger AC</h3>
-              <img
-                src="./assets/club-logos/wolfsberger.png"
-                alt="Logo of SV Ried Football Club"
-              />
-              <i class="fa-solid fa-angle-right match__arrow"></i>
-            </div>
+          <div class="card">
+            <h3 class="card__heading">
+              <img src="./assets/icons/spectators.svg" />Zuschauer
+              (Fassungsvermögen)
+            </h3>
+            <p class="card__text-content">(7200)</p>
           </div>
-          <div class="match">
-            <div class="match__home-team">
-              <img
-                src="./assets/club-logos/klagenfurt.png"
-                alt="Logo of SV Ried Football Club"
-              />
-              <h3 class="match__heading">SK Austria Klagenfurt</h3>
-            </div>
-            <div class="match__centered-info match__centered-info--scheduled">
-              <p>
-                <img src="./assets/icons/clock.png" alt="A clock Icon" /> in 23
-                Stunden
-              </p>
-              <p>Samstag, 4. März</p>
-              <p>17:00 Uhr</p>
-            </div>
-            <div class="match__away-team">
-              <h3 class="match__heading">SCR Altach</h3>
-              <img
-                src="./assets/club-logos/altach.png"
-                alt="Logo of SV Ried Football Club"
-              />
-              <i class="fa-solid fa-angle-right match__arrow"></i>
-            </div>
+          <div class="card">
+            <h3 class="card__heading">
+              <img src="./assets/icons/clock.svg" />Spielbeginn
+            </h3>
+            <p class="card__text-content">Samstag, 4. März 17:00 Uhr</p>
           </div>
-          <div class="match">
-            <div class="match__home-team">
-              <img
-                src="./assets/club-logos/tirol.png"
-                alt="Logo of SV Ried Football Club"
-              />
-              <h3 class="match__heading">WSG Tirol</h3>
-            </div>
-            <div class="match__centered-info match__centered-info--results">
-              <p>
-                <img src="./assets/icons/clock.png" alt="A clock Icon" /> vor 16
-                Stunden
-              </p>
-              <p>2:3</p>
-              <p>(1:2, 1:1)</p>
-            </div>
-            <div class="match__away-team">
-              <h3 class="match__heading">LASK</h3>
-              <img
-                src="./assets/club-logos/lask.png"
-                alt="Logo of SV Ried Football Club"
-              />
-              <i class="fa-solid fa-angle-right match__arrow"></i>
-            </div>
+          <div class="card">
+            <h3 class="card__heading">
+              <img src="./assets/icons/calendar.svg" />Saison/Runde
+            </h3>
+            <p class="card__text-content">Bundesliga 22/23 | 20. Runde</p>
           </div>
-          <div class="match">
-            <div class="match__home-team">
-              <img
-                src="./assets/club-logos/rapid.png"
-                alt="Logo of SV Ried Football Club"
-              />
-              <h3 class="match__heading">SK Rapid Wien</h3>
-            </div>
-            <div class="match__centered-info match__centered-info--results">
-              <p>
-                <img src="./assets/icons/clock.png" alt="A clock Icon" /> vor 18
-                Stunden
-              </p>
-              <p>2:4</p>
-              <p>(1:1, 1:3)</p>
-            </div>
-            <div class="match__away-team">
-              <h3 class="match__heading">FC Salzburg</h3>
-              <img
-                src="./assets/club-logos/salzburg.png"
-                alt="Logo of SV Ried Football Club"
-              />
-              <i class="fa-solid fa-angle-right match__arrow"></i>
-            </div>
-          </div>
+        </div>
+        <div class="table-container">
+          <h3 class="table-row__heading">
+            <img src="./assets/icons/calendar.svg" /> Vorherige Begegnungen
+          </h3>
+          <span class="table-row__title">Saison</span
+          ><span class="table-row__title">Heim</span
+          ><span class="table-row__title">Stand</span
+          ><span class="table-row__title">Auswärts</span>
+
+          <span class="table-row__date">vor 2 Tagen</span
+          ><span class="table-row__season">Bundesliga 22/23</span
+          ><img
+            class="table-row__club-logo"
+            src="./assets/club-logos/ried.png"
+            alt=""
+          /><span class="table-row__result">2:1</span
+          ><img
+            class="table-row__club-logo"
+            src="./assets/club-logos/fak.png"
+            alt=""
+          />
+
+          <span class="table-row__date">vor 6 Monaten</span
+          ><span class="table-row__season">Bundesliga 22/23</span
+          ><img
+            class="table-row__club-logo"
+            src="./assets/club-logos/fak.png"
+            alt=""
+          /><span class="table-row__result">3:1</span
+          ><img
+            class="table-row__club-logo"
+            src="./assets/club-logos/ried.png"
+            alt=""
+          />
+
+          <span class="table-row__date">vor 17 Monaten</span
+          ><span class="table-row__season">Bundesliga 21/22</span
+          ><img
+            class="table-row__club-logo"
+            src="./assets/club-logos/fak.png"
+            alt=""
+          /><span class="table-row__result">2:2</span
+          ><img
+            class="table-row__club-logo"
+            src="./assets/club-logos/ried.png"
+            alt=""
+          />
+
+          <span class="table-row__date">vor 2 Jahren</span
+          ><span class="table-row__season">Bundesliga 21/22</span
+          ><img
+            class="table-row__club-logo"
+            src="./assets/club-logos/ried.png"
+            alt=""
+          /><span class="table-row__result">1:3</span
+          ><img
+            class="table-row__club-logo"
+            src="./assets/club-logos/fak.png"
+            alt=""
+          />
         </div>
       </section>
     </main>

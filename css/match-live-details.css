@@ -1,0 +1,175 @@
+@import "./variables.css";
+@import "./global.css";
+@import "./header.css";
+@import "./breadcrumbs.css";
+@import "./round-sidescroller.css";
+@import "./league-banner.css";
+@import "./footer.css";
+
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  overflow: hidden;
+  background-color: var(--bg-primary);
+  border-radius: 4px;
+  padding: 24px;
+
+  box-shadow: var(--box-shadow);
+}
+
+.card:first-child {
+  grid-row: 1 / span 2;
+}
+
+.card__map {
+  object-fit: scale-down;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.card__heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: italic;
+
+  padding: 0 0 16px 0;
+  border-bottom: 1px solid var(--font-tertiary);
+}
+
+.card__heading > img {
+  object-fit: contain;
+  height: 1.2rem;
+  width: 1.2rem;
+  margin-right: 8px;
+}
+
+.card:last-child img {
+  background: var(--bg-secondary);
+}
+
+.card__text-content {
+  color: var(--font-primary);
+  font-size: 1.2rem;
+
+  padding: 16px 0 8px 0;
+}
+
+.table-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 44px);
+  overflow: hidden;
+
+  font-style: italic;
+
+  margin: 24px 0 48px 0;
+
+  box-shadow: var(--box-shadow);
+}
+
+.table-container > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.table-row__heading {
+  grid-column: 1 / -1;
+  justify-self: center;
+
+  color: var(--font-secondary);
+  font-size: 0.9rem;
+
+  background-color: var(--bg-secondary);
+  padding: auto 100%;
+}
+
+.table-row__heading img {
+  filter: var(--filter-black-to-white);
+  margin-right: 4px;
+}
+
+.table-row__club-logo {
+  object-fit: contain;
+  height: 100%;
+  padding: 4px;
+}
+
+.table-row__title {
+  color: var(--font-secondary);
+  background: var(--bg-secondary-050) 0% 0% no-repeat padding-box;
+}
+
+.table-row__heading + .table-row__title {
+  grid-column: 1/2;
+}
+
+.table-row__date:nth-child(even),
+.table-row__season:nth-child(odd),
+.table-row__club-logo:nth-child(even),
+.table-row__result:nth-child(odd) {
+  background-color: var(--bg-primary);
+}
+
+.table-row__date {
+  display: none;
+}
+
+.table-row__title{
+  color: var(--font-secondary);
+}
+
+.table-row__date,
+.table-row__season,
+.table-row__result {
+  color: var(--font-primary);
+}
+
+@media (prefers-color-scheme: dark){
+  .table-row__heading img {
+    filter: unset;
+    margin-right: 4px;
+  }
+
+  .table-row__title{
+    color: var(--font-primary);
+    border-bottom: 2px solid var(--bg-secondary);
+    
+  }
+  .card__heading > img {
+    filter: var(--filter-black-to-white);
+  }
+}
+
+@media screen and (min-width: 600px) {
+
+  .card-container {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    margin: 8px 0;
+  }
+
+  .table-container {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 44px);
+    border-radius: 4px;
+  }
+
+  .table-row__heading + .table-row__title {
+    grid-column: 1/3;
+    padding-left: 30%;
+  }
+
+  .table-row__date {
+    display: flex;
+    justify-content: left;
+    padding-left: 4px;
+  }
+}

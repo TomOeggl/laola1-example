@@ -1,0 +1,188 @@
+@import "./variables.css";
+@import "./global.css";
+@import "./header.css";
+@import "./breadcrumbs.css";
+@import "./round-sidescroller.css";
+@import "./league-banner.css";
+@import "./footer.css";
+
+.ticker-section-container {
+  background-color: var(--bg-primary);
+  padding: 24px;
+  margin: 16px 0 64px 0;
+  border-radius: 4px;
+  box-shadow: var(--box-shadow);
+}
+
+.ticker-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  overflow-x: scroll;
+  margin-bottom: 16px;
+
+  font-style: italic;
+  font-weight: 600;
+}
+.ticker-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.ticker-nav span {
+  color: var(--font-primary);
+  
+  background-color: var(--bg-tertiary);
+  padding: 16px 12px;
+  min-width: fit-content;
+  border-radius: 4px;
+}
+
+.ticker-nav img {
+  object-fit: contain;
+  width: 12px;
+}
+
+.ticker-nav input {
+  font-size: 1rem;
+  font-weight: 600;
+  font-style: italic;
+
+  width: 100%;
+  background-color: var(--bg-primary);
+  padding: 16px 8px 16px 32px;
+  border: 2px solid var(--bg-tertiary);
+  border-radius: 4px;
+}
+
+.ticker-nav input:focus{
+  outline: none;
+}
+
+span.ticker-nav__input-span {
+  width: 100%;
+  position: relative;
+  padding: 0px;
+}
+
+.ticker-nav input::placeholder {
+  font-size: 1rem;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.ticker-nav__input-icon {
+  object-fit: contain;
+  position: absolute;
+  top: 20px;
+  left: 14px;
+}
+
+.ticker-update {
+  position: relative;
+  margin-left: 32px;
+  padding: 24px;
+  border-left: 1px dashed var(--bg-secondary-050);
+  border-bottom: 1px solid var(--bg-tertiary);
+}
+
+.ticker-update__time {
+  color: var(--font-primary);
+  font-size: 0.75rem;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.ticker-update__heading {
+  color: var(--font-primary);
+  font-style: italic;
+  padding: 12px 0;
+}
+.ticker-update__text-content {
+  color: var(--font-primary);
+  font-size: 1rem;
+  padding: 4px 0;
+}
+
+.ticker-update span{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 16px;
+  left: -40px;
+  background-color: var(--bg-primary);
+}
+
+.ticker-update:nth-of-type(1) span{
+  left: -12px;
+}
+
+.ticker-update__icon {
+  max-width: 24px;
+  min-width: 24px;
+  max-height: 24px;
+  min-height: 24px;
+  padding: 4px;
+}
+.ticker-update__club-logo {
+  max-width: 28px;
+  min-width: 28px;
+  max-height: 28px;
+  min-height: 28px;
+  padding: 4px;
+}
+
+.ticker-update__btn-show-more {
+  display: flex;
+  justify-self: center;
+  
+  color: var(--font-alert);
+  font-style: italic;
+  font-weight: 700;
+
+  background-color: var(--bg-primary);
+  padding: 12px 48px;
+  margin: 12px auto;
+
+  border: 2px solid var(--font-alert);
+  border-radius: 4px;
+}
+
+.ticker-update__btn-show-more:hover {
+  color: var(--font-secondary);
+  background-color: var(--bg-alert);
+}
+
+@media (prefers-color-scheme: dark) {
+  .ticker-nav img {
+    filter: var(--filter-black-to-white);
+  }
+  .ticker-nav input {
+    color: var(--font-primary);
+  }
+  .ticker-nav input::placeholder {
+    color: var(--font-primary);
+  }
+  img.ticker-nav__input-icon{
+    filter: unset;
+  }
+  .ticker-update {
+    border-left: 1px dashed var(--font-primary);
+  }
+  .ticker-update__icon {
+    filter: var(--filter-black-to-white);
+  }
+  .ticker-update__icon--no-filter{
+    filter: unset;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .ticker-nav input {
+    width: unset;
+  }
+
+  span.ticker-nav__input-span {
+    width: unset;
+  }
+}
