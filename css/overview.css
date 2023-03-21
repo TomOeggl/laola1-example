@@ -1,6 +1,6 @@
 @import "./variables.css";
 @import "./global.css";
-@import "./header.css";
+@import "./header-with-nav.css";
 @import "./footer.css";
 
 .overview-section{
