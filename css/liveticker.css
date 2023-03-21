@@ -41,6 +41,7 @@
 .ticker-nav img {
   object-fit: contain;
   width: 12px;
+  padding: auto 4px;
 }
 
 .ticker-nav input {

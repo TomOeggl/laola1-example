@@ -24,7 +24,93 @@ header {
   background-color: var(--bg-alert);
   border-radius: 2px;
   margin-right: -3px;
+  border: none;
 }
+
+/* BTN LOGIC & STYLING */
+
+.banner__btn-nav-container {
+  color: var(--font-secondary);
+  width: 44px;
+  transform: skewX(-10deg);
+  font-weight: 400;
+  font-size: 1.5rem;
+  padding: 0.5rem 0.8rem;
+  background-color: var(--bg-alert);
+  border-radius: 2px;
+  margin-right: -3px;
+  border: none;
+  height: 32px;
+  position: relative;
+}
+
+
+
+.banner__btn-nav-container::before,
+.banner__btn-nav-container::after{
+  content: "";
+  background-color: #fff;
+  height: 3px;
+  position: absolute;
+  left: 8px;
+  right: 8px;
+}
+
+.banner__btn-nav-container::before{
+  transform: translateY(4px);
+}
+
+.banner__btn-nav-container::after{
+  transform: translateY(-6px);
+}
+
+.banner__nav-wrapper{
+  position: absolute;
+  background-color: var(--bg-secondary);
+  top:80px;
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+
+.banner__btn-nav-container:focus + .banner__nav-wrapper,
+.banner__nav-wrapper:focus, .banner__nav-wrapper:hover, .banner__nav-wrapper:active
+{
+  display: block;
+}
+
+.sub-nav{
+  padding: 4px;
+  margin-top: 4px;
+  display: none;
+  background-color: var(--bg-secondary-050);
+}
+
+.banner__nav-wrapper li:active > div, .banner__nav-wrapper li:focus > div,
+.banner__nav-wrapper li:hover > div{
+display: block;
+}
+
+
+.banner__nav-wrapper li{
+  list-style: none;
+  min-width: 100%;
+  padding: 8px;
+  border-bottom: 1px solid var(--font-secondary);
+  
+}
+
+
+
+
+
+.banner__nav-wrapper a{
+  text-decoration: none;
+  color: var(--font-secondary);
+
+}
+
+
 .banner__right-nav-container :first-child {
   transform: rotate(90deg);
 }
